@@ -81,21 +81,6 @@ p {
     font-weight: 400;
 }
 
-.button {
-    background: none;
-    border: 2px solid var(--primary-font-color);
-    padding: 6px 12px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    box-shadow: 1px 2px 3px rga(0, 0, 0, 0.6);
-    display: inline-block;
-}
-
-.button:hover {
-    color: var(--secondary);
-    background: var(--primary);
-}
-
 input,
 textarea {
     padding: 10px 16px;
@@ -246,7 +231,7 @@ footer p {
     font-size: 0.8em;
     text-align: center;
     margin: 20px;
-    color: --var(--soft-font-color);
+    color: var(--soft-font-color);
 }
 
 /* small tablet styles */
