@@ -2,8 +2,8 @@
 :root {
     --primary: #fdf8f6;
     --secondary: rgb(243, 174, 147);
-    --accent-font-color: #181A18 ;
-    --soft-font-color: #5F6980 ;
+    --accent-font-color: #181A18;
+    --soft-font-color: #5F6980;
 }
 
 /* reset */
@@ -32,6 +32,12 @@ body {
     background: #fff;
     overflow-x: hidden;
     font-family: 'Lato';
+}
+
+.container {
+    max-width: 1440px;
+    padding: 24px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -144,7 +150,7 @@ textarea {
     padding: 0 20px 20px 20px;
 }
 
-#experience h3{
+#experience h3 {
     padding: 12px 20px;
 }
 
@@ -160,7 +166,7 @@ textarea {
     font-weight: 500;
 }
 
-#experience a:hover{
+#experience a:hover {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 5px;
     border-top: rgba(255, 255, 255, 0.2) 0.5px solid;
@@ -188,11 +194,8 @@ textarea {
     padding: 8px 20px;
 }
 
-#work h4 {
-    font-size: 0.9em;
-    margin-top: 0;
-    margin-bottom: 8px;
-    color: #222222;
+#work p {
+    margin-top: 8px;
 }
 
 #work ul {
@@ -210,26 +213,73 @@ textarea {
     background-color: #EEF0FF;
 }
 
+
 .projects a {
     grid-column: 1/9;
     display: flex;
+    flex-direction: column;
     gap: 12px;
     margin-bottom: 12px;
 }
 
 .projects a img {
-    max-width: 50%;
+    max-width: 100%;
     align-self: center;
     border-radius: 5px;
+    margin-bottom: 16px;
 }
 
 #contact {
     padding: 8px 20px;
 }
 
+.fa-paper-plane {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.fa-paper-plane:hover {
+    /* transform: translateX(10px); */
+    animation: paper-plane-soaring 2s ease-out forwards;
+}
+
+@keyframes paper-plane-soaring {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        -moz-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+
+    40% {
+        -webkit-transform: rotate(7deg) scale(1);
+        -moz-transform: rotate(7deg) scale(1);
+        transform: rotate(7deg) scale(1);
+    }
+
+    50% {
+        -webkit-transform: translate(50px, -100px) rotate(30deg);
+        -moz-transform: translate(50px, -100px) rotate(30deg);
+        transform: translate(50px, -100px) rotate(30deg);
+    }
+
+    75% {
+        -webkit-transform: translate(50px, -100px) rotate(30deg);
+        -moz-transform: translate(50px, -100px) rotate(30deg);
+        transform: translate(50px, -100px) rotate(30deg);
+    }
+
+    100% {
+        -webkit-transform: translate(50px, -100px) rotate(30deg);
+        -moz-transform: translate(50px, -100px) rotate(30deg);
+        transform: translate(50px, -100px) rotate(30deg);
+        opacity: 0;
+    }
+
+}
+
 footer p {
     font-size: 0.8em;
-    text-align: center;
+    text-align: left;
     margin: 20px;
     color: var(--soft-font-color);
 }
@@ -255,6 +305,7 @@ footer p {
         padding-left: 30px;
         padding-right: 30px;
     }
+
     /* .welcome-text {
         position: sticky;
         top: 0;
@@ -268,7 +319,8 @@ footer p {
     }
 
     .period {
-        min-width: 130px; /* Ajuste cette valeur en fonction de la largeur que tu souhaites */
+        min-width: 130px;
+        /* Ajuste cette valeur en fonction de la largeur que tu souhaites */
         margin-right: 20px;
     }
 
@@ -278,7 +330,8 @@ footer p {
     }
 
     .xp {
-        flex-grow: 1; /* Permet à ce bloc de prendre le reste de l'espace */
+        flex-grow: 1;
+        /* Permet à ce bloc de prendre le reste de l'espace */
     }
 }
 
@@ -289,8 +342,9 @@ footer p {
         grid-template-columns: 3fr 4fr;
     }
 
-    #welcome{
-        align-self: start;   /* Aligne l'élément en haut de sa cellule */
+    #welcome {
+        align-self: start;
+        /* Aligne l'élément en haut de sa cellule */
     }
 
     section {
@@ -298,7 +352,8 @@ footer p {
     }
 
     .period {
-        min-width: 140px; /* Ajuste cette valeur en fonction de la largeur que tu souhaites */
+        min-width: 140px;
+        /* Ajuste cette valeur en fonction de la largeur que tu souhaites */
         margin-right: 20px;
     }
 
@@ -308,7 +363,8 @@ footer p {
     }
 
     .xp {
-        flex-grow: 1; /* Permet à ce bloc de prendre le reste de l'espace */
+        flex-grow: 1;
+        /* Permet à ce bloc de prendre le reste de l'espace */
     }
 
     #experience a {
