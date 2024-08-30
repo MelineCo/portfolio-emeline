@@ -176,8 +176,8 @@ textarea {
     font-size: 0.8em;
     padding: 4px 8px;
     border-radius: 12px;
-    color: rgb(243, 174, 147);
-    background-color: rgba(243, 174, 147, 0.2);
+    color: #5669FF;
+    background-color: #EEF0FF;
 }
 
 /* #experience .xp {
@@ -206,8 +206,8 @@ textarea {
     font-size: 0.8em;
     padding: 4px 8px;
     border-radius: 12px;
-    color: #5EEAD4;
-    background-color: rgba(73, 186, 180, 0.2);
+    color: #5669FF;
+    background-color: #EEF0FF;
 }
 
 .projects a {
