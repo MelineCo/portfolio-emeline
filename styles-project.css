@@ -228,7 +228,10 @@ footer p {
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-    margin-top: 50px;
+    color: var(--soft-font-color);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.9em;
 }
 
 .back p {
@@ -236,9 +239,13 @@ footer p {
     padding-left: 12px;
     padding-bottom: 3px;
     margin: 0;
-    text-transform: uppercase;
+    text-decoration: underline;
     font-weight: 700;
     color: black;
+}
+
+.home {
+    padding: 8px;
 }
 
 
@@ -274,11 +281,6 @@ footer p {
         height: 0;
         overflow: hidden;
     }
-
-    /* .welcome-text {
-        position: sticky;
-        top: 0;
-    } */
 
     #experience a {
         display: flex;
@@ -316,7 +318,7 @@ footer p {
         top: 0;
         width: 300px;
         height: 100vh;
-        padding-top: 44px;
+        padding-top: 8px;
     }
 
     .sticky-menu ul {
@@ -325,13 +327,11 @@ footer p {
         line-height: 0.9em;
         
     }
-/* 
 
-    .sticky-menu ul li a {
-        text-decoration: none;
-        color: var(--soft-font-color);
-        font-weight: 300;
-    }*/
+    .back {
+        margin-top: 60px;
+        margin-left: 38px;
+    }
 
     .part {
         font-weight: 400;

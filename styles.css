@@ -87,6 +87,27 @@ p {
     font-weight: 400;
 }
 
+.underlined {
+    text-decoration: underline;
+}
+
+.fa-download, .fa-paper-plane, .fa-arrow-up-right-from-square {
+    padding-left: 6px;
+}
+
+.fa-arrow-up-right-from-square {
+    margin-bottom: 12px;
+}
+
+.external-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+
+
 input,
 textarea {
     padding: 10px 16px;
@@ -240,6 +261,15 @@ textarea {
 
 .fa-paper-plane:hover {
     transform: translateX(5px) translateY(-5px);
+}
+
+.fa-download {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.fa-download:hover {
+    transform: translateY(5px);
 }
 
 footer p {
