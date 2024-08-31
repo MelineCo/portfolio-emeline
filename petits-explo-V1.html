@@ -16,252 +16,306 @@
 
 <body>
     <div class="container">
-        <section id="intro">
-            <div class="intro-text">
-                <h1 class="hero-primary project-name">The Little Explorers</h1>
-                <h3>A mobile app to list or find family activities near you</h3>
+        <div class="two-col">
 
-                <img class="screenshots" src="assets/Les petits explorateurs.png" alt="project img">
-
-                <h2>Overview</h2>
-                <p>The Little Explorers is a mobile application developed in React Native
-                    as part of a final project for the “Web and Mobile Application Developer”
-                    bootcamp with La Capsule.
-
-                    This project stems from one of my needs as a mother:
-                    finding activities for my child in the surrounding villages.</p>
-
-                <h3>Core functionalities</h3>
-                <ul class="functionalities">
-                    <li><i class="fa-solid fa-user"></i>Account creation</li>
-                    <li><i class="fa-solid fa-magnifying-glass"></i>Activity search with filters</li>
-                    <li><i class="fa-solid fa-location-dot"></i>Geolocation</li>
-                    <li><i class="fas fa-heart"></i>Saving favorite activities</li>
-                    <li><i class="fa-solid fa-gears"></i>Setting user preferences in the profile</li>
-                    <li><i class="fa-solid fa-pen-to-square"></i>Management of the activities by the associations
-                        (creation, modification, deletion)</li>
-                </ul>
-
-                <h3>My role</h3>
-                <p>I had the opportunity to pitch the idea that caught the interest of two of my classmates.<br>For
-                    the design, I enjoyed the process of adapting an existing theme to meet
-                    our specific needs. <br>
-                    On the development process, I worked on a significant portion of
-                    the code:</p>
+            <nav class="sticky-menu grid">
                 <ul>
-                    <li>Redux store initialization</li>
-                    <li>Authentication</li>
-                    <li>Filter selection screen</li>
-                    <li>User preferences management</li>
-                    <li>Organizer profile screen & backend routes</li>
-                    <li>Screen displaying listed activities (+edit and delete actions) & backend routes</li>
-                    <li>Add a photo</li>
-                    <li>Most of the design, I did my best to match all the screens to the design.</li>
+                    <li class="part"><a href="#overview"><b>Overview</b></a></li>
+                    <li><a href="#functionalities">Core functionalities</a></li>
+                    <li><a href="#role">My role</a></li>
+                    <li><a href="#skills">Required skills</a></li>
+                    <li><a href="#github">Source code</a></li>
+                    <li class="part"><a href="#design"><b>Design and prototyping</b></a></li>
+                    <li><a href="#storyboard">Storyboard</a></li>
+                    <li><a href="#tests">User tests</a></li>
+                    <li><a href="#wireframes">Wireframes</a></li>
+                    <li><a href="#mockup">Mock up</a></li>
+                    <li class="part"><a href="#project"><b>Project management</b></a></li>
+                    <li><a href="#mental-outline">Quick mental outline of the project</a></li>
+                    <li><a href="#backlogs">Project backlogs</a></li>
+                    <li class="part"><a href="#dev"><b>Development</b></a></li>
+                    <li><a href="#difficulties">Difficulties</a></li>
+                    <li><a href="#lessons">Lessons learned</a></li>
+                    <li><a href="#improvements">What I would do differently</a></li>
                 </ul>
+                <a href="index.html" class="back">
+                    <div><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                        </svg> </div>
+                    <div>
+                        <p>All projects</p>
+                    </div>
+                </a>
+            </nav>
 
-                <p>I consolidated my knowledge and I also learned a lot along the way! <br>
-                    And it was a very rewarding experience to see our combined efforts
-                    bring the project to life &#x2728;.</p>
+            <div class="col">
+                <section id="intro">
+                    <div class="intro-text">
+                        <h1 class="hero-primary project-name">The Little Explorers</h1>
+                        <h3>A mobile app to list or find family activities near you</h3>
 
-                <img class="screenshots" src="assets/screens.png" alt="my-work">
-                <h3>Required skills</h3>
-                <p>To complete this project, we needed the following skills:</p>
-                <ul>
-                    <li>Teamwork on <span class="highlight">Github</span></li>
-                    <li>Create a database with <span class="highlight">MongoDB</span></li>
-                    <li>Model the database with <span class="highlight">Mongoose</span></li>
-                    <li>Create a back-end with <span class="highlight">Node.JS</span> and <span
-                            class="highlight">Express.JS</span></li>
-                    <li><span class="highlight">Use an API</span> to manage geolocation data</li>
-                    <li>Code with <span class="highlight">React Native</span></li>
-                    <li>Use <span class="highlight">expo Go</span> to simulate the application.</li>
-                    <li>Use <span class="highlight">Redux</span> to manage the transit of information between
-                        components.</li>
-                    <li>Use libraries: bcrypt, uid2, uniqid, FontAwesome, Cloudinary, moment, mongoose, node-fetch,
-                        uniqid.</li>
-                    <li>Host images on <span class="highlight">Cloudinary</span></li>
-                    <li>Deploy the application in production using <span class="highlight">Vercel</span> for the
-                        back-end and Expo for the front-end
-                    </li>
-                </ul>
+                        <img class="screenshots" src="assets/Les petits explorateurs.png" alt="project img">
+
+                        <h2 id="overview">Overview</h2>
+                        <p>The Little Explorers is a mobile application developed in React Native
+                            as part of a final project for the “Web and Mobile Application Developer”
+                            bootcamp with La Capsule.
+
+                            This project stems from one of my needs as a mother:
+                            finding activities for my child in the surrounding villages.</p>
+
+                        <h3 id="functionalities">Core functionalities</h3>
+                        <ul class="functionalities">
+                            <li><i class="fa-solid fa-user"></i>Account creation</li>
+                            <li><i class="fa-solid fa-magnifying-glass"></i>Activity search with filters</li>
+                            <li><i class="fa-solid fa-location-dot"></i>Geolocation</li>
+                            <li><i class="fas fa-heart"></i>Saving favorite activities</li>
+                            <li><i class="fa-solid fa-gears"></i>Setting user preferences in the profile</li>
+                            <li><i class="fa-solid fa-pen-to-square"></i>Management of the activities by the
+                                associations
+                                (creation, modification, deletion)</li>
+                        </ul>
+
+                        <h3 id="role">My role</h3>
+                        <p>I had the opportunity to pitch the idea that caught the interest of two of my
+                            classmates.<br>For
+                            the design, I enjoyed the process of adapting an existing theme to meet
+                            our specific needs. <br>
+                            On the development process, I worked on a significant portion of
+                            the code:</p>
+                        <ul>
+                            <li>Redux store initialization</li>
+                            <li>Authentication</li>
+                            <li>Filter selection screen</li>
+                            <li>User preferences management</li>
+                            <li>Organizer profile screen & backend routes</li>
+                            <li>Screen displaying listed activities (+edit and delete actions) & backend routes</li>
+                            <li>Add a photo</li>
+                            <li>Most of the design, I did my best to match all the screens to the design.</li>
+                        </ul>
+
+                        <p>I consolidated my knowledge and I also learned a lot along the way! <br>
+                            And it was a very rewarding experience to see our combined efforts
+                            bring the project to life &#x2728;.</p>
+
+                        <img class="screenshots" src="assets/screens.png" alt="my-work">
+                        <h3 id="skills">Required skills</h3>
+                        <p>To complete this project, we needed the following skills:</p>
+                        <ul>
+                            <li>Teamwork on <span class="highlight">Github</span></li>
+                            <li>Create a database with <span class="highlight">MongoDB</span></li>
+                            <li>Model the database with <span class="highlight">Mongoose</span></li>
+                            <li>Create a back-end with <span class="highlight">Node.JS</span> and <span
+                                    class="highlight">Express.JS</span></li>
+                            <li><span class="highlight">Use an API</span> to manage geolocation data</li>
+                            <li>Code with <span class="highlight">React Native</span></li>
+                            <li>Use <span class="highlight">expo Go</span> to simulate the application.</li>
+                            <li>Use <span class="highlight">Redux</span> to manage the transit of information
+                                between
+                                components.</li>
+                            <li>Use libraries: bcrypt, uid2, uniqid, FontAwesome, Cloudinary, moment, mongoose,
+                                node-fetch,
+                                uniqid.</li>
+                            <li>Host images on <span class="highlight">Cloudinary</span></li>
+                            <li>Deploy the application in production using <span class="highlight">Vercel</span> for
+                                the
+                                back-end and Expo for the front-end
+                            </li>
+                        </ul>
 
 
-                <h3>Source code</h3>
-                <p><a href="https://github.com/mattvan83/lespetitsexplorateurs-backend">Backend link</a>
-                    &bull; <a href="https://github.com/mattvan83/lespetitsexplorateurs-frontend">Frontend link</a></p>
+                        <h3 id="github">Source code</h3>
+                        <p><a href="https://github.com/mattvan83/lespetitsexplorateurs-backend">Backend link</a>
+                            &bull; <a href="https://github.com/mattvan83/lespetitsexplorateurs-frontend">Frontend
+                                link</a></p>
 
-                <h2>Design and prototyping</h2>
-                <h3>Storyboard</h3>
-                <p>We started by imagining a storyboard.<br>
-                    As we were working remotely, we sketched it out digitally.</p>
-                <img class="screenshots" src="assets/storyboard.png" alt="storyboard">
+                        <h2 id="design">Design and prototyping</h2>
+                        <h3 id="storyboard">Storyboard</h3>
+                        <p>We started by imagining a storyboard.<br>
+                            As we were working remotely, we sketched it out digitally.</p>
+                        <img class="screenshots" src="assets/storyboard.png" alt="storyboard">
 
-                <h3>User tests</h3>
-                <p>Here are the main characteristics of potential users of our application:</p>
-                <ul>
-                    <li>Parents of young children or nannies</li>
-                    <li>Looking for children activities</li>
-                    <li>Living in a medium-sized town or village</li>
-                </ul>
+                        <h3 id="tests">User tests</h3>
+                        <p>Here are the main characteristics of potential users of our application:</p>
+                        <ul>
+                            <li>Parents of young children or nannies</li>
+                            <li>Looking for children activities</li>
+                            <li>Living in a medium-sized town or village</li>
+                        </ul>
 
 
-                <p>After the creation of our storyboard, we carried out user tests with a panel of 5 people meeting
-                    our potential user criteria. Those tests provided valuable feedbacks.
-                    <span class="highlight">Hover the card</span> to visualize how we addressed those pain points:
-                </p>
+                        <p>After the creation of our storyboard, we carried out user tests with a panel of 5 people
+                            meeting
+                            our potential user criteria. Those tests provided valuable feedbacks.
+                            <span class="highlight">Hover the card</span> to visualize how we addressed those pain
+                            points:
+                        </p>
 
-                <div class="postit">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                Would like pre-filling or auto-complete
+                        <div class="postit">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        Would like pre-filling or auto-complete
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <ul>
+                                            <li>+ Geolocation request </li>
+                                            <li>+ Autocomplete on addresses</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flip-card-back">
-                                <ul>
-                                    <li>+ Geolocation request </li>
-                                    <li>+ Autocomplete on addresses</li>
-                                </ul>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        Need for a secure space
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <ul>
+                                            <li>+ Use of a pseudonym</li>
+                                            <li>- Deletion of the naming fields</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        Is it a free or paid activity?
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <ul>
+                                            <li>+ Price info on the activity</li>
+                                            <li>+ Price filter in the search</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        Unclear naming with the notion of “cards”
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <ul>
+                                            <li>+ <i>Created files</i> renamed to <i>My activities</i></li>
+                                            <li>+ <i>Create</i> renamed to <i>List</i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        Agenda view is useless
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <ul>
+                                            <li>- Removal of the Agenda screen</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        Infos in the burger menu not very accessible
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <ul>
+                                            <li>+ Moved <i>My Profile</i> and <i>My Activities</i> screens to the
+                                                bottom bar
+                                                menu</li>
+                                            <li>+ Moved the <i>List an activity</i> button to <i>My activities</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <h3 id="wireframes">Wireframes</h3>
+                        <p>We then created wireframes based on the storyboards and made a few modifications
+                            following user
+                            testing.</p>
+                        <img class="screenshots" src="assets/wireframes.png" alt="wireframes">
+
+                        <h3 id="mockup">Mock up</h3>
+                        <p>Thanks to the Figma community, we were able to use a model that corresponded well to our
+                            project and
+                            adapt it to our needs. This enabled us to get a nice design without spending too much
+                            time on it,
+                            and to devote ourselves fully to development.</p>
+
+                        <img class="screenshots" src="assets/mock-up.png" alt="mockup">
+
+                        <h2 id="project">Project management</h2>
+
+                        <h3 id="mental-outline">Quick mental outline of the project</h3>
+                        <p>Before designing a sprint backlog, I took the screens one by one to identify all the
+                            tasks to be
+                            completed.</p>
+                        <img class="screenshots" src="assets/quick-mental-outline.jpeg" alt="mental-outline">
+
+                        <h3 id="backlogs">Projects backlog</h3>
+                        <p>It was then easier to divide the user stories into sub-tasks and prioritize them in
+                            relation to each
+                            other.<br>
+                            We used Trello to divide up the tasks and track their progress.</p>
+                        <img class="screenshots" src="assets/kanban-board.png" alt="kanban">
+
+                        <h2 id="dev">Development</h2>
+
+                        <h3 id="difficulties">Difficulties</h3>
+                        <p>
+                            What gave me the most trouble was managing a conflict between displaying the keyboard
+                            when selecting
+                            an input field and displaying the “Register” button on the account creation page. I
+                            finally got it
+                            right on iPhone, but not on Android.
+                        </p>
+                        <p>It was a headache trying to align the way the application worked on an Android phone with
+                            that of an
+                            Apple phone. Particularly for keyboard positioning and pin selection on the map. We had
+                            to choose
+                            between the two.
+                            As I was in charge of the styling, we chose to do a great job on iPhone because I have
+                            one.</p>
+                        <p>Also, modifying the style of the material top tabs navigator was not easy. I couldn't
+                            figure out how
+                            to do it. I read the docs over and over again but what finally helped me was... ChatGPT.
+                        </p>
+
+                        <h3 id="lessons">Lessons learned</h3>
+                        <p>The keys to our project's success were <span class="highlight">communication</span> and
+                            <span class="highlight">mutual support</span>. During those two weeks, we'd do an
+                            early-morning and an early-afternoon review, and we'd take the time to help each other
+                            out when one
+                            of us got stuck for too long. I also realized that going through fast crapy code is a
+                            great way to
+                            understand the <span class="highlight">importance of clean code</span>.
+                        </p>
+
+                        <h3 id="improvements">What I would do differently</h3>
+                        <p>Looking back, now that I've learned more stuff about React or MongoDB, I would:</p>
+                        <ul>
+                            <li>Use $geonear in MongoDB. It outputs documents in order of nearest to farthest from a
+                                specified
+                                point.</li>
+                            <li>Filter activies on the front-end instead of the back-end. This would have simplified
+                                our
+                                back-end
+                                and the user experience would have been more reactive.</li>
+                            <li>Add personalized hooks for data fetching, geolocation & autocomplete.</li>
+                            <li>Use a form state object instead of several states.</li>
+                        </ul>
+
                     </div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                Need for a secure space
-                            </div>
-                            <div class="flip-card-back">
-                                <ul>
-                                    <li>+ Use of a pseudonym</li>
-                                    <li>- Deletion of the naming fields</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                Is it a free or paid activity?
-                            </div>
-                            <div class="flip-card-back">
-                                <ul>
-                                    <li>+ Price info on the activity</li>
-                                    <li>+ Price filter in the search</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                Unclear naming with the notion of “cards”
-                            </div>
-                            <div class="flip-card-back">
-                                <ul>
-                                    <li>+ <i>Created files</i> renamed to <i>My activities</i></li>
-                                    <li>+ <i>Create</i> renamed to <i>List</i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                Agenda view is useless
-                            </div>
-                            <div class="flip-card-back">
-                                <ul>
-                                    <li>- Removal of the Agenda screen</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                Infos in the burger menu not very accessible
-                            </div>
-                            <div class="flip-card-back">
-                                <ul>
-                                    <li>+ Moved <i>My Profile</i> and <i>My Activities</i> screens to the bottom bar
-                                        menu</li>
-                                    <li>+ Moved the <i>List an activity</i> button to <i>My activities</i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3>Wireframes</h3>
-                <p>We then created wireframes based on the storyboards and made a few modifications following user
-                    testing.</p>
-                <img class="screenshots" src="assets/wireframes.png" alt="wireframes">
-
-                <h3>Mock up</h3>
-                <p>Thanks to the Figma community, we were able to use a model that corresponded well to our project and
-                    adapt it to our needs. This enabled us to get a nice design without spending too much time on it,
-                    and to devote ourselves fully to development.</p>
-
-                <img class="screenshots" src="assets/mock-up.png" alt="mockup">
-
-                <h2>Project management</h2>
-
-                <h3>Quick mental outline of the project</h3>
-                <p>Before designing a sprint backlog, I took the screens one by one to identify all the tasks to be
-                    completed.</p>
-                <img class="screenshots" src="assets/quick-mental-outline.jpeg" alt="mental-outline">
-
-                <h3>Projects backlog</h3>
-                <p>It was then easier to divide the user stories into sub-tasks and prioritize them in relation to each
-                    other.<br>
-                    We used Trello to divide up the tasks and track their progress.</p>
-                <img class="screenshots" src="assets/kanban-board.png" alt="kanban">
-
-                <h2>Development</h2>
-
-                <h3>Difficulties</h3>
-                <p>
-                    What gave me the most trouble was managing a conflict between displaying the keyboard when selecting
-                    an input field and displaying the “Register” button on the account creation page. I finally got it
-                    right on iPhone, but not on Android.
-                </p>
-                <p>It was a headache trying to align the way the application worked on an Android phone with that of an
-                    Apple phone. Particularly for keyboard positioning and pin selection on the map. We had to choose
-                    between the two.
-                    As I was in charge of the styling, we chose to do a great job on iPhone because I have one.</p>
-                <p>Also, modifying the style of the material top tabs navigator was not easy. I couldn't figure out how
-                    to do it. I read the docs over and over again but what finally helped me was... ChatGPT.</p>
-
-                <h3>Lessons learned</h3>
-                <p>The keys to our project's success were <span class="highlight">communication</span> and <span
-                        class="highlight">mutual support</span>. During those two weeks, we'd do an
-                    early-morning and an early-afternoon review, and we'd take the time to help each other out when one
-                    of us got stuck for too long. I also realized that going through fast crapy code is a great way to
-                    understand the <span class="highlight">importance of clean code</span>.</p>
-
-                <h3>What I would do differently</h3>
-                <p>Looking back, now that I've learned more stuff about React or MongoDB, I would:</p>
-                <ul>
-                    <li>Use $geonear in MongoDB. It outputs documents in order of nearest to farthest from a specified
-                        point.</li>
-                    <li>Filter activies on the front-end instead of the back-end. This would have simplified our
-                        back-end
-                        and the user experience would have been more reactive.</li>
-                    <li>Add personalized hooks for data fetching, geolocation & autocomplete.</li>
-                    <li>Use a form state object instead of several states.</li>
-                </ul>
-
+                </section>
             </div>
-        </section>
-        <a href="index.html" class="back">
-            <div><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path
-                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
-                </svg> </div>
-            <div>
-                <p>All projects</p>
-            </div>
-        </a>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

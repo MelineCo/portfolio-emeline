@@ -2,8 +2,8 @@
 :root {
     --primary: #9AA5FF;
     --secondary: rgb(243, 174, 147);
-    --accent-font-color: #181A18 ;
-    --soft-font-color: #5F6980 ;
+    --accent-font-color: #181A18;
+    --soft-font-color: #5F6980;
 }
 
 /* reset */
@@ -27,6 +27,7 @@ ul {
     margin-bottom: 1.1em;
     line-height: 1.5em;
 }
+
 li {
     margin: 0;
     padding-left: 8px;
@@ -36,16 +37,16 @@ li {
 }
 
 .functionalities {
-        list-style-type: none; 
-        padding: 0;         
-        margin: 0;            
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .functionalities i {
     color: var(--primary);
     margin-right: 10px;
     width: 20px;
-    text-align: center; 
+    text-align: center;
 }
 
 .social {
@@ -62,6 +63,13 @@ body {
 }
 
 h1 {
+    font-size: 2.4em;
+    color: var(--accent-font-color);
+    margin-top: 44px;
+    font-family: "Domine";
+}
+
+.project-name {
     font-size: 2.4em;
     color: var(--accent-font-color);
     margin-top: 44px;
@@ -125,10 +133,10 @@ p {
     perspective: 1000px;
 }
 
-.flip-card-back > ul {
-    list-style-type: none; 
-    padding: 0;         
-    margin: 0;            
+.flip-card-back>ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .flip-card-inner {
@@ -140,14 +148,17 @@ p {
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg); /* Flip the card */
+    transform: rotateY(180deg);
+    /* Flip the card */
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden; /* Hide the back face when not visible */
+    backface-visibility: hidden;
+    /* Hide the back face when not visible */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +176,8 @@ p {
 
 .flip-card-back {
     background-color: #DDE1FF;
-    transform: rotateY(180deg); /* Initially rotate the back face */
+    transform: rotateY(180deg);
+    /* Initially rotate the back face */
     text-align: left;
 }
 
@@ -179,7 +191,7 @@ p {
 /* mobile styles */
 .grid {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    /* grid-template-columns: repeat(8, 1fr); */
 }
 
 footer p {
@@ -190,9 +202,14 @@ footer p {
 }
 
 .container {
-    margin: auto;
+    max-width: 1440px;
     padding: 24px;
-    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sticky-menu {
+    height: 0;
+    overflow: hidden;
 }
 
 .project-name {
@@ -200,7 +217,7 @@ footer p {
     margin-bottom: 30px;
 }
 
-.screenshots{
+.screenshots {
     display: block;
     margin: 32px auto;
     max-width: 100%;
@@ -237,6 +254,12 @@ footer p {
     .site-nav li {
         margin-left: 20px;
     }
+
+    .sticky-menu {
+        height: 0;
+        overflow: hidden;
+    }
+
 }
 
 /* large tablets and laptops */
@@ -246,6 +269,12 @@ footer p {
         padding-left: 30px;
         padding-right: 30px;
     }
+
+    .sticky-menu {
+        height: 0;
+        overflow: hidden;
+    }
+
     /* .welcome-text {
         position: sticky;
         top: 0;
@@ -259,7 +288,8 @@ footer p {
     }
 
     .period {
-        min-width: 130px; /* Ajuste cette valeur en fonction de la largeur que tu souhaites */
+        min-width: 130px;
+        /* Ajuste cette valeur en fonction de la largeur que tu souhaites */
         margin-right: 20px;
     }
 
@@ -269,7 +299,8 @@ footer p {
     }
 
     .xp {
-        flex-grow: 1; /* Permet à ce bloc de prendre le reste de l'espace */
+        flex-grow: 1;
+        /* Permet à ce bloc de prendre le reste de l'espace */
     }
 }
 
@@ -277,11 +308,65 @@ footer p {
 @media screen and (min-width: 1200px) {
     .two-col {
         display: grid;
-        grid-template-columns: 3fr 4fr;
+        grid-template-columns: 1fr 4fr 1fr;
     }
 
-    #welcome{
-        align-self: start;   /* Aligne l'élément en haut de sa cellule */
+    .sticky-menu {
+        position: sticky;
+        top: 0;
+        width: 300px;
+        height: 100vh;
+        padding-top: 44px;
+    }
+
+    .sticky-menu ul {
+        list-style-type: none;
+        padding: 0;
+        line-height: 0.9em;
+        
+    }
+/* 
+
+    .sticky-menu ul li a {
+        text-decoration: none;
+        color: var(--soft-font-color);
+        font-weight: 300;
+    }*/
+
+    .part {
+        font-weight: 400;
+        padding-top: 12px;
+        list-style-type:square; 
+    } 
+
+    /***/
+
+    .sticky-menu li::before {
+        content: "—";
+        color: #B6B9C0;
+        font-size: 18px; 
+        font-weight: 500;
+    }
+
+    .sticky-menu li a {
+        opacity: 0;
+        transition: opacity 0.3s ease; 
+        color: var(--soft-font-color);
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 0.9em;
+        padding-left: 8px;
+    }
+
+    .sticky-menu ul:hover a {
+        opacity: 1;
+        color: var(--soft-font-color);
+        
+    }
+    
+    #welcome {
+        align-self: start;
+        /* Aligne l'élément en haut de sa cellule */
     }
 
     section {
@@ -289,7 +374,8 @@ footer p {
     }
 
     .period {
-        min-width: 140px; /* Ajuste cette valeur en fonction de la largeur que tu souhaites */
+        min-width: 140px;
+        /* Ajuste cette valeur en fonction de la largeur que tu souhaites */
         margin-right: 20px;
     }
 
@@ -299,7 +385,8 @@ footer p {
     }
 
     .xp {
-        flex-grow: 1; /* Permet à ce bloc de prendre le reste de l'espace */
+        flex-grow: 1;
+        /* Permet à ce bloc de prendre le reste de l'espace */
     }
 
     #experience a {
@@ -307,6 +394,6 @@ footer p {
     }
 
 
-    
+
 
 }
