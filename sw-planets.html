@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles-project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap&family=Homemade+Apple&display=swap"
+        rel="stylesheet">
+    <title>Portfolio Emeline Courcelle</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="two-col">
+            <div>
+            <a href="index.html" class="back">
+                <i class="fa-solid fa-house"></i><span class="home">Home</span>
+            </a>
+            <nav class="sticky-menu grid">
+                
+                <ul>
+                    <li class="part"><a href="#overview"><b>Overview</b></a></li>
+                    <li><a href="#functionalities">Objectives</a></li>
+                    <li><a href="#role">Presentation</a></li>
+                    <li class="part"><a href="#learn"><b>What I learned</b></a></li>
+                    <li><a href="#tanstack">Basics of TanStack query</a></li>
+                    <li><a href="#usercenteredtesting">User-centered testing</a></li>
+                    <li><a href="#outlet">useOutletContext</a></li>
+                    <li class="part"><a href="#difficulties"><b>Difficulties</b></a></li>
+                    <li><a href="#typescript">Getting used to TypeScript</a></li>
+                    <li><a href="#vitest">Tests configuration</a></li>
+                    <li><a href="#mui">Tests on MUI components</a></li>
+                </ul>
+            </nav>
+        </div>
+
+            <div class="col">
+                <section id="intro">
+                    <div class="intro-text">
+                        <h1 class="hero-primary project-name">Star wars planets</h1>
+                        <h3>A simple app to familiarize myself new tools and libraries</h3>
+
+                        <img class="screenshots" src="assets/planet-list-modal-dark.png" alt="project img">
+
+                        <h2 id="overview">Overview</h2>
+                        <p>SW planets is a React project I completed in 1 week as part of my internship at Health for People. 
+                            The aim was to familiarize myself with the company's technical stack before diving 
+                            into the source code of TOMA Santé applications. 
+                            Romain, my internship tutor, helped me when I encountered difficulties that kept me stuck for too long.</p>
+
+                        <h3 id="functionalities">Core functionalities</h3>
+                        <ul class="functionalities">
+                            <li><i class="fa-solid fa-list"></i>View planet list</li>
+                            <li><i class="fa-solid fa-earth-oceania"></i></i>View planet details</li>
+                            <li><i class="fa-solid fa-user"></i></i>View resident details</li>
+                        </ul>
+
+                        <h3 id="skills">Required skills</h3>
+                        <p>To complete this project, I needed the following skills:</p>
+                        <ul>
+                            <li>Code with <span class="highlight">TypeScript</span></li>
+                            <li>Fetch data with <span class="highlight">TanStack Query</span></li>
+                            <li><span class="highlight">Use an API</span> to get Star Wars data</li>
+                            <li>Use the components library <span class="highlight">Material UI</span>.</li>
+                            <li>Test the application with <span class="highlight">Vitest & React-testing-library</span></li>
+                            <li>Deploy the application in production using <span class="highlight">Vercel</span></li>
+                        </ul>
+
+                        <img class="screenshots" src="assets/project-overview.png" alt="project overview">
+                        <br>
+
+                        <h3 id="github">Source code & Demo</h3>
+                        <p><a href="https://github.com/MelineCo/SW-planets">Github link</a>
+                            &bull; <a href="https://sw-planets-chi.vercel.app/">Demo link</a></p>
+
+                        <h2 id="learn">What I learned</h2>
+
+                        <h3 id="tanstack">Basics of TanStack query</h3>
+                        <p>
+                            The useQuery hook provided by <span class="highlight">TanStack Query facilitates the management of load, error and success states when retrieving asynchronous data</span> from a React application. 
+                            It simplifies API calls, data state management and caching of query results.
+                            Even with only the basics, I can see why this library is so popular.
+                        </p>
+
+                        <h3 id="usercenteredtesting">User-centered testing</h3>
+                        <p> 
+                            User-centered testing ensures that the tests reflect real user interactions and behaviors.
+                            React Testing Library provides several methods for testing React components by interacting with the DOM as a user would.
+                            After this project, I better understand <span class="highlight">what to test: what the user sees and does</span>.
+                        </p>
+
+                        <h3 id="outlet">useOutletContext</h3>
+                        <p>I wanted to share a function between a component and its child component via an Outlet.
+                             To do this, I usedOutletContext. The next challenge was to simulate the context in the tests.</p>
+                          
+                        <h2 id="difficulties">Difficulties</h2>
+
+                        <h3 id="typescript">Getting used to TypeScript</h3>
+                        <p>As I wasn't used to TypeScript, it was hard for me to read my code with TypeScript. 
+                            <span class="highlight">I was slower at proofreading myself</span>, even though TS certainly saved me time by reducing potential errors.</p>
+                        <p>And apart from the fact that proofreading wasn't as easy, I didn't know what and how to type or I often forgot to type my props... Oops! 
+                            Which earned me some nice warnings.</p>
+
+                        <h3 id="vitest">Tests configuration</h3>
+                        <p>Initially, we wanted me to become more proficient with Jest and react-testing-library, 
+                            as these are the testing tools used at Health for People.
+                            But this quickly became a problem, as <span class="highlight">Vite and Jest can come into conflict when used together.</span> 
+                            Finally, we decided to use Vitest, which is specifically designed to work with Vite.</p>
+
+                        <h3 id="mui">Tests on MUI components</h3>
+                        <p>
+                            As MUI adds layers of styles to its elements, these are sometimes more difficult to select with standard React-testing-library selectors (such as getByRole, getByText).
+                        </p>
+                        <p>
+                            Sometimes <span class="highlight">I've been unable to test certain elements with a data-test-id attribute.</span> 
+                            In this case, the solution I found was to add an aria-label attribute.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
